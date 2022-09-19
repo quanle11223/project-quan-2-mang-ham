@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input"> <br> <br> <br>
+<div id="nhom">
+  <table>
+    <tr>
+      <td><button type="button" name="btn" value="1" onclick="inputValue(this.value)">1</button> </td>
+      <td><button type="button" name="btn" value="2" onclick="inputValue(this.value)">2</button> </td>
+      <td><button type="button" name="btn" value="3" onclick="inputValue(this.value)">3</button> </td>
+      <td><button type="button" name="op"  value="+" onclick="inputValue(this.value)">+</button> </td>
+    </tr>
+    <tr>
+      <Td><button type="button" name="btn" value="4" onclick="inputValue(this.value)">4</button> </Td>
+      <Td><button type="button" name="btn" value="5" onclick="inputValue(this.value)">5</button> </Td>
+      <Td><button type="button" name="btn" value="6" onclick="inputValue(this.value)">6</button> </Td>
+      <Td><button type="button" name="op" value="-"onclick="inputValue(this.value)">-</button> </Td>
+    </tr>
+    <tr>
+      <td><button type="button" name="btn" value="7" onclick="inputValue(this.value)">7</button> </td>
+      <td><button type="button" name="btn" value="8" onclick="inputValue(this.value)">8</button> </td>
+      <td><button type="button" name="btn" value="9" onclick="inputValue(this.value)">9</button> </td>
+      <td><button type="button" name="op"  value="*" onclick="inputValue(this.value)">*</button> </td>
+    </tr>
+    <Tr>
+      <td><button type="button" name="btn" value="C" onclick="xoa(this.value)">AC</button> </td>
+      <td><button type="button" name="btn" value="0" onclick="inputValue(this.value)">0</button> </td>
+      <td><button type="button" name="btn" value="=" onclick="result()">=</button> </td>
+      <td><button type="button" name="btn" value="/" onclick="inputValue(this.value)">/</button> </td>
+    </Tr>
+  </table>
+</div>
+<script>
+  let input = document.getElementById('input')
+  function inputValue(value) {
+    input.value += value
+  }
+  function result(){
+    let result = eval(input.value)
+    input.value = result
+  }
+  function xoa(){
+    input.value=""
+  }
+
+</script>
+</body>
+</html>
